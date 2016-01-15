@@ -13,13 +13,35 @@ import time
 import pwd
 import grp
 
+####################################################
+############## BEGIN EDITS BY THRIFUS ##############
+####################################################
+class color:
+    PURPLE = '\033[95m'
+    CYAN = '\033[96m'
+    DARKCYAN = '\033[36m'
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    END = '\033[0m'
+
+print color.BOLD + 'FakeSSH\'s PID is: ' + color.RED
+print os.getpid()
+print color.END
+####################################################
+############### END EDITS BY THRIFUS ###############
+####################################################
+
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
-raw_config=open('data/config.json').read()
+raw_config=open('./data/config.json').read()
 config = json.loads(raw_config)
 host_key = paramiko.RSAKey(filename=config['key'])
 
 # Set up logging
-paramiko.util.log_to_file('data/error_log')
+paramiko.util.log_to_file('./data/error_log')
 log_pipe = None
 if (config['log'] is not False):
     log_pipe = open(config['log'], "a")
@@ -80,7 +102,7 @@ def incoming_connection(client):
     try:
         t = paramiko.Transport(client)
         t.local_version = 'SSH-2.0-OpenSSH_4.3'
-        
+
         # Try to load server moduli for gex
         try:
             t.load_server_moduli()
@@ -141,7 +163,7 @@ server_listening = True
 while server_listening:
     try:
         sock.listen(100)
-        print 'Waiting for connection.'
+        print 'Waiting for connection...'
         client, addr = sock.accept()
 
         print 'Client connected!'
