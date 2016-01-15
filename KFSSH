@@ -2,5 +2,7 @@
 
 printf "\033[1m\nAsking for root privileges...\033[0m"
 printf "\033[1m\nKilling FakeSSH...\n\033[0m"
-sudo kill $(cat /tmp/FakeSSH/PID)
+sudo bash <<EOF
+    kill $(cat /tmp/FakeSSH/PID)
+EOF
 printf "\n"

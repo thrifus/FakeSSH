@@ -3,5 +3,7 @@
 printf "\033[1m\n\nChanging directories...\033[0m"
 cd /Applications/FakeSSH/ # Change this to the directory that you keep FakeSSh in
 printf "\033[1m\nAsking for root privileges...\n\033[0m"
-sudo python ./server.py > /dev/null 2>&1 & disown
+sudo bash <<EOF
+    python ./server.py > /dev/null 2>&1 & disown
+EOF
 printf "\033[1m\nBackgrounding...\n\n\033[0m"
