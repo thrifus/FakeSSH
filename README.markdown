@@ -37,7 +37,7 @@ If you're on Ubuntu, you could create an upstart script at `/etc/init/fakessh.co
 
 If you enable logging, you can run `python stats.py` to get statistics about login attempts. `--today` will get you the count today, and `--hist` will produce a graph of the last week. (You can use them both together.)
 
-<div id="edits">
+<div id="edits"></div>
 # Edited by [thrifus](http://thrifus.co/)
 * Why did I edit this?
     * I wanted to make it a little easier to launch
@@ -46,4 +46,3 @@ If you enable logging, you can run `python stats.py` to get statistics about log
     * I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit `FSSH` file before linking it
     * sudo ln -s /path/to/FSSH /usr/bin/FSSH
     * sudo ln -s /path/to/KFSSH /usr/bin/KFSSH
-</div>
