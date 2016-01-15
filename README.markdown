@@ -39,10 +39,11 @@ If you enable logging, you can run `python stats.py` to get statistics about log
 
 <div id="edits"></div>
 # Edited by [thrifus](http://thrifus.co/)
+Edits are clearly marked in everything modified, and those modifications are all that I should receive credit for. Everything else is [Tyler Menezes](https://github.com/tylermenezes).
 * Why did I edit this?
     * I wanted to make it a little easier to launch
     * I wanted to be able to background it and then kill it without killing all Python processes
 * How to install the files?
     * I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit `FSSH` file before linking it
-    * sudo ln -s /path/to/FSSH /usr/bin/FSSH
-    * sudo ln -s /path/to/KFSSH /usr/bin/KFSSH
+    * `sudo ln -s /path/to/FSSH /usr/bin/FSSH`
+    * `sudo ln -s /path/to/KFSSH /usr/bin/KFSSH`
