@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>FakeSSH by thrifus</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>FakeSSH</h1>
+        <h2>Fake SSH server for confusing spammers, because we all know security through obscurity rocks.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/thrifus/FakeSSH/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/thrifus/FakeSSH/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/thrifus/FakeSSH" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="fakessh" class="anchor" href="#fakessh" aria-hidden="true"><span class="octicon octicon-link"></span></a>FakeSSH</h1>
+
+<p>FakeSSH is an SSH server which denies all login requests sent its way. It's the result of literally minutes of work.</p>
+
+<p>Move your real SSH server to a different port, then run the FakeSSH server.</p>
+
+<h1>
+<a id="edited-by-thrifus" class="anchor" href="#edited-by-thrifus" aria-hidden="true"><span class="octicon octicon-link"></span></a>Edited by <a href="http://thrifus.co/">thrifus</a>
+</h1>
+
+<ul>
+<li>Why did I edit this?
+
+<ul>
+<li>I wanted to make it a little easier to launch</li>
+<li>I wanted to be able to background it and then kill it without killing all Python processes</li>
+</ul>
+</li>
+<li>How to install the files?
+
+<ul>
+<li>I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit <code>FSSH</code> file before linking it</li>
+<li>sudo ln -s /path/to/FSSH /usr/bin/FSSH</li>
+<li>sudo ln -s /path/to/KFSSH /usr/bin/KFSSH</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h2>
+
+<p>In a sense, FakeSSH is based on the idea that security through obscurity is kind of like adding a single bit to your security, the value of which is widely known. It might actually prevent a targeted attack by an unskilled attacker.</p>
+
+<p>Mostly, though, I just like the idea that someone is wasting time trying to log into a server which will literally never let them in.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>python</li>
+<li>paramiko</li>
+</ul>
+
+<h1>
+<a id="use" class="anchor" href="#use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use</h1>
+
+<ol>
+<li>Create an RSA key using <code>ssh_keygen</code>. Save it to data/rsa.</li>
+<li>Copy data/config.sample.json to data/config.json</li>
+<li>Edit if desired.</li>
+<li>Run <code>server.py</code> with python.</li>
+</ol>
+
+<p>If you're on Ubuntu, you could create an upstart script at <code>/etc/init/fakessh.conf</code>:</p>
+
+<pre><code># fakessh
+description "A fake SSH server"
+author "Tyler Menezes &lt;tylermenezes@gmail.com&gt;"
+start on runlevel [2345]
+stop on runlevel [016]
+respawn
+exec python /opt/fakessh/server.py
+</code></pre>
+
+<h2>
+<a id="graphing" class="anchor" href="#graphing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graphing</h2>
+
+<p>If you enable logging, you can run <code>python stats.py</code> to get statistics about login attempts. <code>--today</code> will get you the count today, and <code>--hist</code> will produce a graph of the last week. (You can use them both together.)</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
