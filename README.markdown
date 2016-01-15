@@ -1,17 +1,9 @@
+[Click me to see edits](#edits)
 # FakeSSH
 
 FakeSSH is an SSH server which denies all login requests sent its way. It's the result of literally minutes of work.
 
 Move your real SSH server to a different port, then run the FakeSSH server.
-
-# Edited by [thrifus](http://thrifus.co/)
-* Why did I edit this?
-    * I wanted to make it a little easier to launch
-    * I wanted to be able to background it and then kill it without killing all Python processes
-* How to install the files?
-    * I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit `FSSH` file before linking it
-    * sudo ln -s /path/to/FSSH /usr/bin/FSSH
-    * sudo ln -s /path/to/KFSSH /usr/bin/KFSSH
 
 ## Why?
 
@@ -44,3 +36,14 @@ If you're on Ubuntu, you could create an upstart script at `/etc/init/fakessh.co
 ## Graphing
 
 If you enable logging, you can run `python stats.py` to get statistics about login attempts. `--today` will get you the count today, and `--hist` will produce a graph of the last week. (You can use them both together.)
+
+<div id="edits">
+# Edited by [thrifus](http://thrifus.co/)
+* Why did I edit this?
+    * I wanted to make it a little easier to launch
+    * I wanted to be able to background it and then kill it without killing all Python processes
+* How to install the files?
+    * I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit `FSSH` file before linking it
+    * sudo ln -s /path/to/FSSH /usr/bin/FSSH
+    * sudo ln -s /path/to/KFSSH /usr/bin/KFSSH
+</div>
