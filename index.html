@@ -1,32 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
     <title>FakeSSH by thrifus</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+
+    <header>
+      <div class="container">
         <h1>FakeSSH</h1>
-        <p>Fake SSH server for confusing spammers, because we all know security through obscurity rocks.</p>
-        <p class="view"><a href="https://github.com/thrifus/FakeSSH">View the Project on GitHub <small>thrifus/FakeSSH</small></a></p>
-        <ul>
-          <li><a href="https://github.com/thrifus/FakeSSH/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/thrifus/FakeSSH/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/thrifus/FakeSSH">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+        <h2>Fake SSH server for confusing spammers, because we all know security through obscurity rocks.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/thrifus/FakeSSH/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/thrifus/FakeSSH/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/thrifus/FakeSSH" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
         <p><a href="#edits">Click me to see edits</a></p>
 
 <h1>
@@ -93,10 +94,10 @@ exec python /opt/fakessh/server.py
 <li>I wanted to be able to background it and then kill it without killing all Python processes</li>
 </ul>
 </li>
-<li>How to install the files?
+<li>How to install:
 
 <ul>
-<li>I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit <code>FSSH</code> file before linking it</li>
+<li>I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit the <code>FSSH</code> file before linking it</li>
 <li><code>sudo ln -s /path/to/FSSH /usr/bin/FSSH</code></li>
 <li><code>sudo ln -s /path/to/KFSSH /usr/bin/KFSSH</code></li>
 </ul>
@@ -104,11 +105,7 @@ exec python /opt/fakessh/server.py
 </ul>
       </section>
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/thrifus">thrifus</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
   </body>
 </html>
