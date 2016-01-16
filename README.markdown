@@ -44,6 +44,6 @@ Edits are clearly marked in everything modified, and those modifications are all
     * I wanted to make it a little easier to launch
     * I wanted to be able to background it and then kill it without killing all Python processes
 * How to install:
-    * I recommend placing the FakeSSH folder in your Applications folder (if on OS X, default path is set to /Applications/FakeSSH/), otherwise you'll need to edit the `FSSH` file before linking it
+    * I recommend placing the FakeSSH folder in your Applications folder (if on OS X; the default path is set to /Applications/FakeSSH/), otherwise you'll need to edit the __FSSH__ file before linking it
     * `sudo ln -s /path/to/FSSH /usr/bin/FSSH`
     * `sudo ln -s /path/to/KFSSH /usr/bin/KFSSH`
